@@ -1,0 +1,53 @@
+NESNE YÖNELİMLİ PROGRAMLAMA - 2. HAFTA
+Dr. İsmail Burak Yavru
+C# tekrarı, metotlar, koleksiyonlar, sınıflar ve kapsülleme
+
+Bu pakette üç bağımsız Console App projesi vardır.
+01_Tekrar: türler, dönüşüm, girdi kontrolü, koşul, metot ve döngü.
+02_Koleksiyonlar: dizi, List<string>, foreach ve arama metodu.
+03_EkipmanTakip: List<Ekipman>, Ogrenci, constructor, property ve kapsülleme.
+
+ÇALIŞTIRMA
+Projeler net8.0 hedefler. .NET 8 SDK ile derlenip .NET 8 üzerinde çalıştırılabilir.
+Visual Studio'da ilgili .csproj dosyasını açın ve çalıştırın.
+Farklı bir .NET sürümüyle Console App projesi açtıysanız, örneğin .cs dosyalarını
+o projeye kopyalayabilirsiniz. Hazır Program.cs içeriğini tamamen değiştirin.
+Projeler açık Program/Main yapısı kullanır; eski üst düzey ifadeleri bırakmayın.
+Üç projenin Program.cs dosyalarını aynı projede birleştirmeyin.
+Harici NuGet paketi veya MySQL kurulumu gerekmez.
+
+Terminalde örnek komutlar:
+dotnet run --project 01_Tekrar/Tekrar.csproj
+dotnet run --project 02_Koleksiyonlar/Koleksiyonlar.csproj
+dotnet run --project 03_EkipmanTakip/EkipmanTakip.csproj
+
+03_EKIPMANTAKIP KULLANIMI
+Ekipmanlar: LAB-001 Kamera, LAB-002 Mikrofon, LAB-003 Elektronik kit.
+Kayıtlı öğrenci numaraları: 1001 ve 1002. Tamamı örnek veridir.
+Menü: 1 Listele, 2 Ödünç ver, 3 İade al, 0 Çıkış.
+1. LAB-001'i 1001'e verin. Başarılı olmalı.
+2. Aynı cihazı 1002'ye vermeyi deneyin. Reddedilmeli, cihaz 1001'de kalmalı.
+3. LAB-001'i iade alın. Başarılı olmalı.
+4. Bir kez daha iade alın. Reddedilmeli.
+5. LAB-999'u veya olmayan öğrenci 9999'u deneyin. İşlem yapılmamalı.
+6. Boş bir öğrenci numarası girin. İşlem yapılmamalı.
+7. lab-001 gibi küçük harfle giriş yapın. Program girdiyi düzenleyerek arar.
+
+MODELİN KAPSAMI
+Veriler bellektedir ve yeniden başlatmada başlangıç değerlerine döner.
+Ekipman yalnızca mevcut durumu tutar; ödünç geçmişi, tarihler, kalıcı saklama
+ve eşzamanlı kullanıcı işlemleri henüz bu örneğe dahil değildir.
+OduncVer boş numarayı reddeder; kayıtlı öğrenci kontrolünü Program yapar.
+Constructor boş kimlik/adı reddeder. Demirbaş benzersizliği, yeni kayıt
+özelliği eklenirse listeyi yöneten kodda ayrıca kontrol edilmelidir.
+
+BİREYSEL ÇALIŞMA
+Yalnızca müsait ekipmanları listeleyen bir metot ekleyin.
+OduncAlanNo özelliğinin private set erişimini değiştirmeyin.
+Reddedilen işlemlerde mevcut durumun korunduğunu kontrol edin.
+
+SLAYT KODLARI HAKKINDA
+Sunumda kavramı göstermek için kısa parçalar yer alır. Parçanın Main içine mi,
+Program sınıfına mı, Ekipman sınıfına mı ait olduğu slaytta belirtilir.
+21-24. slaytlardaki ilk taslaklar, final Ekipman sınıfının yerine kullanılmaz.
+Çalışan bütünleşik sürüm 03_EkipmanTakip klasöründedir.
